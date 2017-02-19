@@ -1,0 +1,10 @@
+@import "../css/base/_sizes";
+@import "../css/base/positioning";
+@import "../css/base/hierarchy";
+@import "../css/base/buffers";
+@import "../css/base/paddings";
+@import "../css/base/mixins/shadows";
+
+md-toolbar{
+  @include makeShadow();
+}
