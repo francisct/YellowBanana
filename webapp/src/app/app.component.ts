@@ -8,13 +8,17 @@ import {Http} from '@angular/http';
 })
 export class AppComponent {
   spaceScreens: Array<any>;
-
+  temp: string;
 
   constructor(private http:Http) {
 
     this.http.get('assets/data.json')
       .map(response => response.json().screenshots)
       .subscribe(res => this.spaceScreens = res);
+
+    this.http.get('http://localhost:3000/api/temp')
+      .map(response => response.json())
+      .subscribe(res => this.temp = res);
 
   }
 
